@@ -94,6 +94,12 @@ DATABASES = {
 }
 
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-grahammaher-thewatering-i7bv3udfxqx.ws-eu117.gitpod.io/",
+    "https://the-watering-hole-ed9ee46e4ccd.herokuapp.com/"
+]
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
