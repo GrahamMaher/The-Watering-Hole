@@ -1,1 +1,1 @@
-web: gunicorn the-watering-hole.wsgi
+web: gunicorn the_watering_hole.wsgi
