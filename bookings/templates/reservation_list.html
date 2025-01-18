@@ -1,0 +1,52 @@
+{% extends 'bookings/base.html' %}
+
+
+{% block content %}
+
+<h2>Your Reservations</h2>
+
+<table>
+
+    <tr>
+
+        <th>Table</th>
+
+        <th>Date</th>
+
+        <th>Time</th>
+
+        <th>Guests</th>
+
+        <th>Actions</th>
+
+    </tr>
+
+    {% for reservation in reservations %}
+
+    <tr>
+
+        <td>{{ reservation.table.number }}</td>
+
+        <td>{{ reservation.date }}</td>
+
+        <td>{{ reservation.time }}</td>
+
+        <td>{{ reservation.number_of_guests }}</td>
+
+        <td>
+
+            <a href="{% url 'modify_reservation' reservation.id %}">Modify</a>
+
+            <a href="{% url 'cancel_reservation' reservation.id %}">Cancel</a>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+<a href="{% url 'make_reservation' %}">Make a new reservation</a>
+
+{% endblock %}
